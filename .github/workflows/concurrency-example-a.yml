@@ -1,0 +1,14 @@
+name: concurrency-example-a
+run-name: Concurrency Example A (for testing by ${{ github.actor }})
+on:
+  push:
+    branches:
+      - main
+concurrency:
+  group: concurrency-example
+  cancel-in-progress: true
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello, world!"
