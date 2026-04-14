@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - .github/workflows/concurrency-example-a.yml
+      - .github/workflows/concurrency-example-b.yml
 concurrency:
   group: concurrency-example
   cancel-in-progress: true
